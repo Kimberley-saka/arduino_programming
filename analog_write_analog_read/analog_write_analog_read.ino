@@ -20,7 +20,9 @@ void loop() {
     delay(500);
     
     while(swt == 0) {
-      read = analogRead(tune)
+      read = analogRead(tune);
+      brightness = map(read, 0, 1023, 0, 1023); // map(input, min-input, max-input, min-output, max-output)
+      analogWrite(led, brightness);
     }
   }
 
