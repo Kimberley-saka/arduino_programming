@@ -16,6 +16,15 @@ void setup() {
 void loop() {
   int buttonSwitch = digitalRead(button); // listen for button being clicked
 
-  Serial.print(buttonSwitch);
+  Serial.print("Press: ");
+  Serial.println(buttonSwitch);
   delay(200);
+
+  if (buttonSwitch == 1) {
+    digitalWrite(led1, HIGH);
+  }
+
+  else {
+    digitalWrite(led1, LOW);
+  }
 }
