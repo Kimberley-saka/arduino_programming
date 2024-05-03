@@ -1,5 +1,5 @@
 #define tune 1
-#define sensor 3
+#define sensor 1
 #define led 10
 #define button 7
 
@@ -18,10 +18,13 @@ void loop() {
   
   if(swt == 1) { // if button is pressed
     delay(200);
+
+    swt = digitalRead(button);
     
     while(swt == 0) {
+      swt = digitalRead(button);
       read = analogRead(tune);
-      brightness = map(read, 0, 1023, 0, 1023); // map(input, min-input, max-input, min-output, max-output)
+      brightness = map(read, 0, 1023, 0, 255); // map(input, min-input, max-input, min-output, max-output)
       analogWrite(led, brightness);
     }
 
@@ -31,7 +34,7 @@ void loop() {
 
   else {
     read = analogRead(sensor);
-    brightness = map(read, 0, 1023, 0, 1023);
+    brightness = map(read, 0, 1023, 0, 255);
     analogWrite(led, brightness);
 
   }
