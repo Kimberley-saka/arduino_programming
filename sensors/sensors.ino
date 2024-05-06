@@ -28,13 +28,13 @@ void loop() {
   int lightValues = map(readLightSensor, 0, 1023, 0, 100);
   int micValues = map(readMicrophone, 0, 1023, 0, 100);
 
-  Serial.print("Temperature:");
+  Serial.print("Temperature: ");
   Serial.println(tempValues);
 
-  Serial.print("Light:");
+  Serial.print("Light: ");
   Serial.println(lightValues);
 
-  Serial.print("Microphone:");
+  Serial.print("Microphone: ");
   Serial.println(micValues);
 
   Serial.println();
