@@ -8,11 +8,6 @@
 #define microphone 0
 
 
-int readLightSensor = 0;
-float readTempSensor =  0;
-int readMicrophone = 0;
-
-
 void setup() {
 Serial.begin(9600);
 
@@ -23,9 +18,9 @@ void loop() {
 * This will read from the light sensor, temperature sensor and microphone
 */
 
-  readLightSensor = analogRead(lightSensor); // read values from sensors
-  readTempSensor = analogRead(tempSensor);
-  readMicrophone = analogRead(microphone);
+  int readLightSensor = analogRead(lightSensor); // read values from sensors
+  float readTempSensor = analogRead(tempSensor);
+  int readMicrophone = analogRead(microphone);
 
   delay(1000);
  
