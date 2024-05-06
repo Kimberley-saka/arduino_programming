@@ -11,12 +11,20 @@
 void setup() {
 Serial.begin(9600);
 
+pinMode(2, OUTPUT); // adding speaker pin
+
 }
 
 void loop() {
-/*
-* This will read from the light sensor, temperature sensor and microphone
-*/
+ /*
+ * This will read from the light sensor temperature and sound sensors
+ */
+  
+  /* digitalWrite(2, HIGH);
+  delay(1);
+  digitalWrite(2, LOW);
+  delay(1);
+  */
 
   int readLightSensor = analogRead(lightSensor); // read values from sensors
   float readTempSensor = analogRead(tempSensor);
