@@ -26,7 +26,7 @@ void loop() {
   int lightValues = 0;
   int micValues = 0;
 
-  readLightSensor = analogRead(lightSensor);
+  readLightSensor = analogRead(lightSensor); // read values from sensors
   readTempSensor = analogRead(tempSensor);
   readMicrophone = analogRead(microphone);
 
