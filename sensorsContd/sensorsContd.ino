@@ -18,12 +18,12 @@ void loop() {
 
   lcd.clear();
 
-  lcd.setCursor(0, 1); // set the position of item sto be printed
+  lcd.setCursor(0, 1); // set the position of item the be printed on a 16 x 2 lcd
   lcd.print("Hello World");
 
-  delay(1000);
+  delay(2000);
   lcd.clear();
 
-  lcd.setCursor(0, 0);
+  lcd.setCursor(0, 0); // 0th column, 0th row
 
 }
