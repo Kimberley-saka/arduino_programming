@@ -1,10 +1,14 @@
-// Setup Variables
-// COnfigure piMode
-// read from sensors (optional: use serial to check values)
-// Use if logic to turn on led lights and relays
+#include <hd44780.h>
+#include <Wire.h>
+#include <hd44780ioClass/hd44780_I2Cexp.h>
+
+
+hd44780_I2Cexp lcd(0x20, I2Cexp_MCP23008, 7, 6, 5, 4, 3, 2, 1, HIGH);
+
 
 void setup() {
-
+  lcd.begin(16,2);
+  lcd.print("Hi Kimberley");
 }
 
 void loop() {
