@@ -10,7 +10,7 @@
 #define relay 3
 
 
-int stateRead = 0; // read value of DOUT
+int stateGasRead = 0; // read value of DOUT
 int gasRead = 0;
 int lightRead = 0;
 
@@ -24,9 +24,27 @@ void setup() {
   pinMode(relay, OUTPUT);
   pinMode(DOUT, INPUT);
 
+  lcd.begin(16, 2);
+
 }
 
 void loop() {
+  int gasSensor = analogRead(2); // analog gas read
+  int lightSensor = analogRead(1);
+  stateGasRead = digitalRead(DOUT); // digital gas read
 
+  lcd.setCursor(0, 0);
+
+  lcd.print("Gas: ");
+  lcd.print(gasSensor);
+  
+  lcd.setCursor(0, 1);
+
+  lcd.print("Light: ");
+  lcd.print(lightSensor);
+
+  delay(500);
+
+  lcd.clear();
 
 }
