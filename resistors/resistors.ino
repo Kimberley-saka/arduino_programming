@@ -7,6 +7,6 @@ void setup() {
 }
 
 void loop() {
-  digitalWrite(ledLight, HIGH);
+  digitalWrite(ledLight, HIGH); // turning on the led via transistor
 
 }
